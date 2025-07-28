@@ -3,89 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>¿Querés ser mi novia?</title>
+  <title>Para Lu</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
+      background: url('https://images.unsplash.com/photo-1508264165352-258db2ebd59b?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Georgia', serif;
+      color: white;
       text-align: center;
+      padding: 40px;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3em;
+      line-height: 1.8;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      background-color: #ff99cc;
       color: #fff;
-      margin-bottom: 0.5em;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
     }
 
-    .heart {
-      width: 100px;
-      height: 90px;
-      position: relative;
-      animation: beat 1s infinite;
-      margin: 20px auto;
+    .btn:hover {
+      background-color: #ff70b2;
     }
 
-    .heart::before,
-    .heart::after {
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 90px;
-      background: red;
-      border-radius: 50px 50px 0 0;
-      top: 0;
-      left: 0;
-    }
-
-    .heart::after {
-      left: 50px;
-    }
-
-    .heart::before {
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
-    }
-
-    .heart::after {
-      transform: rotate(45deg);
-      transform-origin: 100% 100%;
-    }
-
-    @keyframes beat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-    }
-
-    .mensaje {
-      font-size: 1.5em;
-      color: #fff;
-      margin-top: 20px;
-    }
-
-    .firma {
-      margin-top: 40px;
-      font-size: 1em;
-      color: rgba(255,255,255,0.8);
+    .refs {
+      font-size: 0.9em;
+      margin-top: 25px;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <h1>¿Querés ser mi novia?</h1>
-  <div class="heart"></div>
-  <div class="mensaje">Te quiero mucho ❤️</div>
-  <div class="firma">Hecho con amor por Lautaro 💌</div>
+  <div class="container">
+    <h1>Lu</h1>
+    <p>
+      Capaz para vos no cambié… pero si lo hice. Por vos.<br><br>
+      Vos fuiste el motivo por el que empecé a pensar distinto, a actuar distinto. Todo lo que compartimos me marcó más de lo que te imaginás. 
+      Me hiciste ver el mundo de otra forma. Aunque creas que no soy el hombre que querés a tu lado, me hiciste querer serlo. Me mostraste un tipo de amor que no quiero perder.<br><br>
+      Capaz estoy mal pidiéndote esto así, pero prefiero intentarlo una vez más que quedarme con la duda para siempre.<br><br>
+      No soy perfecto, pero con vos supe que puedo ser mejor.
+    </p>
+
+    <a class="btn" href="https://wa.me/3513824648">Escribir respuesta</a>
+
+    <div class="refs">
+      <p>🌷 Tulipanes, como los que te gustan.<br>
+      📚 Libros, como los que llenan tu mundo.<br>
+      ⚡ Y como Percy Jackson, ojalá pueda luchar por esta historia hasta el final.</p>
+    </div>
+  </div>
 </body>
 </html>
