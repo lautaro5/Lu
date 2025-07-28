@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Para Lu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -30,35 +30,107 @@
       background-color: rgba(255, 255, 255, 0.85);
     }
 
-    .mensaje {
+    #frase {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.3em;
+      color: #000;
       background-color: rgba(255, 255, 255, 0.6);
       padding: 20px 25px;
       border-radius: 10px;
       max-width: 600px;
       text-align: center;
-      font-size: 1.3em;
-      color: #000;
-      animation: aparecer 3s ease-in-out;
+      border: none;
+      white-space: pre-line;
+      letter-spacing: 1px;
+      /* Sin borde blanco en las letras */
+      text-shadow: none;
+      min-height: 150px;
+      animation: aparecer 3s ease-in-out forwards;
+      opacity: 0;
     }
 
+    /* Animación para que el recuadro aparezca */
     @keyframes aparecer {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
+      to {
         opacity: 1;
-        transform: translateY(0);
+      }
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 14px 32px;
+      font-size: 1.1em;
+      font-family: 'Quicksand', sans-serif;
+      color: #fff;
+      background: linear-gradient(90deg, #25D366 70%, #128C7E 100%);
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 4px 14px rgba(36, 128, 56, 0.18);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      user-select: none;
+      font-weight: 600;
+    }
+
+    .whatsapp-btn:hover {
+      background: linear-gradient(90deg, #128C7E 70%, #25D366 100%);
+      transform: scale(1.07);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      #frase {
+        font-size: 1em;
+        padding: 15px 20px;
+        max-width: 95vw;
+        min-height: 120px;
+      }
+      .whatsapp-btn {
+        padding: 10px 18px;
+        font-size: 1em;
       }
     }
   </style>
 </head>
 <body>
   <h1>Hola mi amor</h1>
-  <div class="mensaje">
-    Puede que hoy estés convencida de que ya no soy el hombre que querés a tu lado. Que nada cambió, o que las cosas que te lastimaron siguen ahí. Pero quiero que sepas algo: yo sí cambié por vos.  
-    Estar con vos me hizo repensar mi forma de ser, de actuar, de ver el amor y la vida. Y aunque no sea perfecto, lo intento cada día porque te amo.  
-    Si aún queda un rincón de vos que me extraña... ¿podríamos volver a intentarlo una vez más?
-  </div>
+  <p id="frase"></p>
+  <a
+    href="https://wa.me/3513824648"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-btn"
+  >
+    Espero tu respuesta
+  </a>
+
+  <script>
+    const texto = `Puede que hoy estés convencida de que ya no soy el hombre que querés a tu lado. Que nada cambió, o que las cosas que te lastimaron siguen ahí. Pero quiero que sepas algo: yo sí cambié por vos.
+
+Estar con vos me hizo repensar mi forma de ser, de actuar, de ver el amor y la vida. Y aunque no sea perfecto, lo intento cada día porque te amo.
+
+Si aún queda un rincón de vos que me extraña... ¿podríamos volver a intentarlo una vez más?
+`;
+
+    let i = 0;
+    const fraseEl = document.getElementById("frase");
+
+    function escribir() {
+      if (i < texto.length) {
+        fraseEl.innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(escribir, 50); // velocidad escritura (50ms por letra)
+      }
+    }
+
+    window.onload = () => {
+      fraseEl.style.opacity = "1"; // para que aparezca con animación
+      escribir();
+    };
+  </script>
 </body>
 </html>
