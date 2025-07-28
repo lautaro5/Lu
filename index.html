@@ -32,6 +32,8 @@
       font-size: 1.45em;
       font-weight: bold;
       letter-spacing: 1px;
+      position: relative;
+      /* Para posicionar el botón dentro */
     }
     .escena2 {
       display: none;
@@ -64,22 +66,22 @@
     }
     #continuarBtn {
       display: none;
-      position: fixed;
-      bottom: 36px;
-      right: 36px;
-      padding: 20px 36px;
+      position: absolute;
+      bottom: 22px;
+      right: 22px;
+      padding: 30px 64px;
       background: linear-gradient(93deg,#b45375,#ee9ca7);
       color: #fff;
       border: none;
-      border-radius: 35px;
-      font-size: 1.35em;
+      border-radius: 45px;
+      font-size: 2.2em;
       font-weight: bold;
-      box-shadow: 0 4px 12px rgba(180,83,117,0.15);
+      box-shadow: 0 4px 18px rgba(180,83,117,0.23);
       cursor: pointer;
       z-index: 10;
-      transition: background 0.2s, transform 0.2s;
       opacity: 0;
       animation: fadein 1.2s forwards;
+      transition: background 0.2s, transform 0.2s;
     }
     #continuarBtn.visible {
       display: block;
@@ -121,7 +123,7 @@
     @media (max-width: 600px) {
       .container, .escena2 { padding: 16px 2vw 18px 2vw; max-width: 98vw; font-size: 1em;}
       h1 { font-size: 2em;}
-      #continuarBtn { font-size: 1em; padding: 13px 18px; right: 12px; bottom: 12px;}
+      #continuarBtn { font-size: 1.1em; padding: 16px 22px; right: 7px; bottom: 7px;}
       #respuestaBtn { font-size: 1.3em; padding: 18px 20px; margin-top: 32px;}
       .escena2 h2 { font-size: 1.3em;}
     }
@@ -131,8 +133,8 @@
   <div class="container" id="escena1">
     <h1>Hola mi amor</h1>
     <div id="frase"></div>
+    <button id="continuarBtn">Continuar</button>
   </div>
-  <button id="continuarBtn">Continuar</button>
   <div class="escena2" id="escena2">
     <h2>¿Me das tu respuesta?</h2>
     <a href="https://wa.me/3513824648" target="_blank" rel="noopener">
