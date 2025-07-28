@@ -1,65 +1,109 @@
 <!DOCTYPE html><html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Para vos...</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Georgia', serif;
-      color: #fff;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Vos</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('https://i.imgur.com/UnRkldX.jpeg') center/cover no-repeat fixed;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .reply-button {
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: #ff66b2;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+  }
+
+  .reply-button:hover {
+    background: #ff338f;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-    .container {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 40px;
-      max-width: 700px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
+
+  @media (max-width: 600px) {
+    .card {
+      padding: 20px;
+    }
+
     h1 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 20px;
+      font-size: 1.6em;
     }
+
     p {
-      line-height: 1.6;
-      font-size: 1.2rem;
-      margin-bottom: 20px;
+      font-size: 1em;
     }
-    a {
-      display: block;
-      text-align: center;
-      margin-top: 30px;
-      text-decoration: none;
-      background-color: #ffb6c1;
-      color: #000;
-      padding: 15px 25px;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    a:hover {
-      background-color: #ffa0b2;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Quiero que leas esto con el corazón…</h1>
-    <p>Puede que hoy estés convencida de que ya no soy el hombre que querés a tu lado. Que nada cambió, o que las cosas que te lastimaron siguen ahí. Pero quiero que sepas algo: <strong>yo sí cambié por vos</strong>.</p>
-    <p>Estar con vos me hizo repensar mi forma de ser, de actuar, de ver el amor. Aprendí de cada error, incluso de aquellos que nunca supe expresar bien. Puede que no lo veas, o que no te parezca suficiente, pero <strong>todo lo que soy ahora es resultado de lo que compartimos juntos</strong>.</p>
-    <p>No te escribo esto para presionarte ni para hacerte sentir culpable. Te escribo porque te extraño, y porque no quiero quedarme con el "qué hubiera pasado si...". Porque te sigo eligiendo, y no me canso de creer que lo nuestro merece una segunda oportunidad.</p>
-    <p>Puede que pienses que no soy quien querés a tu lado, pero yo daría todo por demostrarte que sí puedo serlo. No perfecto, pero real. No el de antes, sino el que aprendió, cambió y todavía cree en lo que alguna vez sentimos.</p>
-    <p>Si sentís que hay algo, aunque sea mínimo, que todavía queda entre los dos…</p>
-    <p><strong>Escribime. No te voy a fallar.</strong></p>
-    <a href="https://wa.me/3513824648" target="_blank">Responder</a>
-  </div>
-</body>
+  }
+</style>
+
+  </head>
+  <body>
+    <div class="card">
+      <h1>Esto es para vos</h1>
+      <p>
+        Sé que tal vez ya no tenga sentido escribirte esto, pero no quiero que te quedes con una idea equivocada de todo lo que sentí y siento.
+      </p>
+      <p>
+        Yo sí cambié por vos. Mi tiempo con vos me hizo ver las cosas de otra manera, me ayudó a crecer, a pensar diferente y a ser mejor.
+      </p>
+      <p>
+        Capaz para vos no fue así. Capaz creés que no fui suficiente o que no soy el hombre que querés a tu lado, como me dijiste. Pero yo sí lo intenté. Y te elegí con cada parte de mí.
+      </p>
+      <p>
+        Lo nuestro fue real para mí. No quiero que pienses que todo lo que te dije o hice fue en vano.
+      </p>
+      <p>
+        Si llegaste hasta acá, gracias por leerme.
+      </p>
+      <a class="reply-button" href="https://wa.me/3513824648">Escribir respuesta 💌</a>
+    </div>
+  </body>
 </html>
