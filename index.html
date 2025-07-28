@@ -150,4 +150,27 @@ Si aún queda un rincón de vos que me extraña... ¿podríamos volver a intenta
     const fraseEl = document.getElementById("frase");
     const continuarBtn = document.getElementById("continuarBtn");
     const escena1 = document.getElementById("escena1");
-    const escena2 = document.getElementById("escena
+    const escena2 = document.getElementById("escena2");
+
+    function escribir() {
+      if (i < texto.length) {
+        fraseEl.innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(escribir, 30);
+      } else {
+        setTimeout(() => {
+          continuarBtn.classList.add("visible");
+        }, 350);
+      }
+    }
+
+    continuarBtn.addEventListener("click", () => {
+      escena1.style.display = "none";
+      escena2.style.display = "flex";
+      document.body.style.background = "#111";
+    });
+
+    window.onload = escribir;
+  </script>
+</body>
+</html>
