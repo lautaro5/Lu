@@ -65,9 +65,7 @@
     }
     #continuarBtn {
       display: none;
-      position: absolute;
-      bottom: 4px; /* Más abajo para no tapar el texto */
-      right: 22px;
+      margin: 32px auto 0 auto;
       padding: 30px 64px;
       background: linear-gradient(93deg,#b45375,#ee9ca7);
       color: #fff;
@@ -77,10 +75,9 @@
       font-weight: bold;
       box-shadow: 0 4px 18px rgba(180,83,117,0.23);
       cursor: pointer;
-      z-index: 10;
       opacity: 0;
-      animation: fadein 1.2s forwards;
       transition: background 0.2s, transform 0.2s;
+      animation: fadein 1.2s forwards;
     }
     #continuarBtn.visible {
       display: block;
@@ -122,7 +119,7 @@
     @media (max-width: 600px) {
       .container, .escena2 { padding: 16px 2vw 18px 2vw; max-width: 98vw; font-size: 1em;}
       h1 { font-size: 2em;}
-      #continuarBtn { font-size: 1.1em; padding: 16px 22px; right: 7px; bottom: 3px;}
+      #continuarBtn { font-size: 1.1em; padding: 16px 22px; margin-top: 18px;}
       #respuestaBtn { font-size: 1.3em; padding: 18px 20px; margin-top: 32px;}
       .escena2 h2 { font-size: 1.3em;}
     }
@@ -132,8 +129,8 @@
   <div class="container" id="escena1">
     <h1>Hola mi amor</h1>
     <div id="frase"></div>
-    <button id="continuarBtn">Continuar</button>
   </div>
+  <button id="continuarBtn">Continuar</button>
   <div class="escena2" id="escena2">
     <h2>¿Me das tu respuesta?</h2>
     <a href="https://wa.me/3513824648" target="_blank" rel="noopener">
