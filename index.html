@@ -62,8 +62,6 @@
       white-space: pre-line;
       word-break: break-word;
     }
-
-    /* Botón flotante abajo a la derecha */
     #continuarBtn {
       display: none;
       position: fixed;
@@ -92,8 +90,6 @@
       from { opacity: 0;}
       to { opacity: 1;}
     }
-
-    /* Escena 2 botón */
     #respuestaBtn {
       margin-top: 70px;
       padding: 38px 64px;
@@ -122,7 +118,6 @@
       text-align: center;
       margin-top: 24px;
     }
-
     @media (max-width: 600px) {
       .container, .escena2 { padding: 16px 2vw 18px 2vw; max-width: 98vw; font-size: 1em;}
       h1 { font-size: 2em;}
@@ -137,18 +132,13 @@
     <h1>Hola mi amor</h1>
     <div id="frase"></div>
   </div>
-
-  <!-- Botón que aparece al finalizar el texto -->
   <button id="continuarBtn">Continuar</button>
-
-  <!-- Segunda escena -->
   <div class="escena2" id="escena2">
     <h2>¿Me das tu respuesta?</h2>
     <a href="https://wa.me/3513824648" target="_blank" rel="noopener">
       <button id="respuestaBtn">Dame tu respuesta</button>
     </a>
   </div>
-
   <script>
     const texto = `Puede que hoy estés convencida de que ya no soy el hombre que querés a tu lado. Que nada cambió, o que las cosas que te lastimaron siguen ahí. Pero quiero que sepas algo: yo no dejo de pensar en vos.
 
@@ -160,14 +150,4 @@ Si aún queda un rincón de vos que me extraña... ¿podríamos volver a intenta
     const fraseEl = document.getElementById("frase");
     const continuarBtn = document.getElementById("continuarBtn");
     const escena1 = document.getElementById("escena1");
-    const escena2 = document.getElementById("escena2");
-
-    function escribir() {
-      if (i < texto.length) {
-        fraseEl.innerHTML += texto.charAt(i);
-        i++;
-        setTimeout(escribir, 30); // velocidad de escritura
-      } else {
-        setTimeout(() => {
-          continuarBtn.classList.add("visible");
-        }, 350);
+    const escena2 = document.getElementById("escena
