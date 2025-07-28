@@ -78,7 +78,6 @@
       opacity: 0;
       transition: background 0.2s, transform 0.2s;
       animation: fadein 1.2s forwards;
-      /* Centrado debajo del recuadro */
     }
     #continuarBtn.visible {
       display: block;
@@ -166,6 +165,7 @@ Si aún queda un rincón de vos que me extraña... ¿podríamos volver a intenta
     continuarBtn.addEventListener("click", () => {
       escena1.style.display = "none";
       escena2.style.display = "flex";
+      continuarBtn.style.display = "none"; // Oculta el botón al pasar a la segunda escena
       document.body.style.background = "#111";
     });
 
