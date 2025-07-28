@@ -1,102 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Para vos</title>
+  <meta charset="UTF-8">
+  <title>Lu</title>
+  <!-- Fuente sentimental -->
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Georgia', serif;
-      background: linear-gradient(to bottom right, #f9e5ec, #d6e0f5);
-      color: #2c2c2c;
+      min-height: 100vh;
+      /* Fondo floral */
+      background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      background-image: url('https://images.unsplash.com/photo-1497032628192-86f99bcd76bc'); /* fondo romántico suave */
-      background-size: cover;
-      background-position: center;
-      backdrop-filter: blur(2px);
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 227, 242, 0.65); /* capa de color cálido */
+      z-index: 1;
+    }
+    .container {
+      position: relative;
+      z-index: 2;
       text-align: center;
-      padding: 1.5rem;
-    }
-
-    .card {
-      background-color: rgba(255, 255, 255, 0.9);
+      padding: 50px 30px 30px 30px;
       border-radius: 20px;
-      padding: 2rem;
-      max-width: 500px;
-      animation: fadeIn 2s ease-in-out;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      background: rgba(255,255,255,0.75);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      margin-top: 60px;
+      max-width: 600px;
     }
-
     h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-family: 'Pacifico', cursive;
+      color: #b45375;
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 8px #fff6fa70;
     }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
+    #frase {
+      font-family: 'Quicksand', sans-serif;
+      color: #804b67;
+      font-size: 1.5em;
+      min-height: 80px;
+      margin-bottom: 30px;
+      white-space: pre-line;
+      letter-spacing: 1px;
     }
-
-    .responder {
-      margin-top: 1.5rem;
-      font-weight: bold;
-      font-size: 1.2rem;
+    .flor {
+      position: fixed;
+      width: 90px;
+      z-index: 3;
+      opacity: 0.7;
+      pointer-events: none;
     }
-
-    a {
-      text-decoration: none;
-      background: #ffc1d3;
-      color: #000;
-      padding: 10px 20px;
-      border-radius: 10px;
+    .flor.top-left { top: 12px; left: 12px; transform: rotate(-14deg);}
+    .flor.bottom-right { bottom: 12px; right: 12px; transform: rotate(10deg);}
+    .whatsapp-btn {
       display: inline-block;
-      transition: 0.3s;
+      margin-top: 32px;
+      padding: 14px 32px;
+      font-size: 1.1em;
+      font-family: 'Quicksand', sans-serif;
+      color: #fff;
+      background: linear-gradient(90deg, #25D366 70%, #128C7E 100%);
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 4px 14px rgba(36, 128, 56, 0.18);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
     }
-
-    a:hover {
-      background: #ffa4bd;
+    .whatsapp-btn:hover {
+      background: linear-gradient(90deg, #128C7E 70%, #25D366 100%);
+      transform: scale(1.07);
     }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
     @media (max-width: 600px) {
-      h1 { font-size: 1.5rem; }
-      p { font-size: 1rem; }
+      .container { padding: 24px 10px 14px 10px; max-width: 98vw;}
+      h1 { font-size: 2em; }
+      #frase { font-size: 1em; }
+      .flor { width: 50px;}
+      .whatsapp-btn { padding: 10px 18px; font-size: 1em;}
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Quiero que leas esto con el corazón…</h1>
-    <p>
-      Puede que hoy estés convencida de que ya no soy el hombre que querés a tu lado. Que nada cambió, o que las cosas que te lastimaron siguen ahí. Pero quiero que sepas algo: yo sí cambié por vos.
-    </p>
-    <p>
-      Estar con vos me hizo repensar mi forma de ser, de actuar, de ver el amor. Aprendí de cada error, incluso de aquellos que nunca supe expresar bien. Puede que no lo veas, o que no te parezca suficiente, pero todo lo que soy ahora es resultado de lo que compartimos juntos.
-    </p>
-    <p>
-      No te escribo esto para presionarte ni para hacerte sentir culpable. Te escribo porque te extraño, y porque no quiero quedarme con el "qué hubiera pasado si...". Porque te sigo eligiendo, y no me canso de creer que lo nuestro merece una segunda oportunidad.
-    </p>
-    <p>
-      Puede que pienses que no soy quien querés a tu lado, pero yo daría todo por demostrarte que sí puedo serlo. No perfecto, pero real. No el de antes, sino el que aprendió, cambió y todavía cree en lo que alguna vez sentimos.
-    </p>
-    <p>
-      ¿Podríamos volver a intentarlo una vez más?
-    </p>
-    <p class="responder">
-      Si sentís que hay algo, aunque sea mínimo, que todavía queda entre los dos…
-      <br><br>
-      <a href="https://wa.me/3513824648" target="_blank">👉 Escribime. No te voy a fallar.</a>
-    </p>
+  <div class="overlay"></div>
+  <!-- Flores SVG decorativas -->
+  <img src="https://www.svgrepo.com/show/474459/flower.svg" class="flor top-left" alt="Flor"/>
+  <img src="https://www.svgrepo.com/show/474459/flower.svg" class="flor bottom-right" alt="Flor"/>
+  
+  <div class="container">
+    <h1>Para Lu</h1>
+    <p id="frase"></p>
+    <!-- Botón de WhatsApp -->
+    <a
+      id="whatsapp-link"
+      class="whatsapp-btn"
+      href="https://wa.me/5491234567890?text=¡Hola!%20Me%20encant%C3%B3%20tu%20mensaje.%20"
+      target="_blank"
+      rel="noopener"
+    >Espero tu respuesta</a>
   </div>
+  <script>
+    // Texto sentimental, podés cambiarlo
+    const texto = `
+> Quiero que leas esto con el corazón…
+
+
+
+Puede que hoy estés convencida de que ya no soy el hombre que querés a tu lado. Que nada cambió, o que las cosas que te lastimaron siguen ahí. Pero quiero que sepas algo: yo sí cambié por vos.
+
+Estar con vos me hizo repensar mi forma de ser, de actuar, de ver el amor. Aprendí de cada error, incluso de aquellos que nunca supe expresar bien. Puede que no lo veas, o que no te parezca suficiente, pero todo lo que soy ahora es resultado de lo que compartimos juntos.
+
+No te escribo esto para presionarte ni para hacerte sentir culpable. Te escribo porque te extraño, y porque no quiero quedarme con el "qué hubiera pasado si...". Porque te sigo eligiendo, y no me canso de creer que lo nuestro merece una segunda oportunidad.
+
+Puede que pienses que no soy quien querés a tu lado, pero yo daría todo por demostrarte que sí puedo serlo. No perfecto, pero real. No el de antes, sino el que aprendió, cambió y todavía cree en lo que alguna vez sentimos.
+
+Si sentís que hay algo, aunque sea mínimo, que todavía queda entre los dos…
+
+Escribime. No te voy a fallar.
+
+
+`;
+    let i = 0;
+    function escribir() {
+      if (i < texto.length) {
+        document.getElementById("frase").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(escribir, 55); // velocidad de escritura
+      }
+    }
+    escribir();
+  </script>
 </body>
 </html>
