@@ -1,78 +1,91 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Para Lu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Querés ser mi novia?</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: url('https://images.unsplash.com/photo-1616691078144-472151797f64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      backdrop-filter: blur(6px) brightness(0.7);
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
     }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 40px;
-      max-width: 800px;
-      margin: 80px auto;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-      animation: fadeIn 2s ease;
-    }
+
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      text-align: center;
-      margin-bottom: 30px;
+      font-size: 2.5em;
+      color: #fff;
+      margin-bottom: 0.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 16px;
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: relative;
+      animation: beat 1s infinite;
+      margin: 20px auto;
     }
-    .button {
-      display: block;
-      text-align: center;
-      margin-top: 30px;
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+      top: 0;
+      left: 0;
     }
-    .button a {
-      background-color: #f06292;
-      color: white;
-      padding: 14px 24px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 18px;
-      transition: background 0.3s;
+
+    .heart::after {
+      left: 50px;
     }
-    .button a:hover {
-      background-color: #ec407a;
+
+    .heart::before {
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
     }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+
+    .heart::after {
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
     }
-    audio {
-      display: none;
+
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .mensaje {
+      font-size: 1.5em;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    .firma {
+      margin-top: 40px;
+      font-size: 1em;
+      color: rgba(255,255,255,0.8);
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>Para vos, Lu</h1>
-    <p>No te escribo para insistir ni para presionarte. Solo necesitaba decirte algo sincero, sin vueltas.</p>
-    <p>Leí todo lo que me dijiste y me dolió, porque sé que te fallé. No voy a negar que hice cosas mal, y me hago cargo. Pero también quiero que sepas algo que tal vez no ves o no creés: <strong>yo sí cambié por vos</strong>.</p>
-    <p>Vos me hiciste ver las cosas de otra manera. Estar con vos me transformó, me empujó a crecer, a cuestionarme actitudes y pensamientos que antes ni siquiera notaba. Puede que para vos no haya sido suficiente o que no lo hayas notado, pero ese cambio fue real. Y sigue siendo parte de mí.</p>
-    <p>Sé que dijiste que no soy el hombre que te gustaría tener al lado. Tal vez tenés razón… al menos, no lo fui en ese momento. Pero estoy intentando serlo. No solo para vos, sino también por mí. Porque hoy entiendo lo que valés, lo que merecías, y lo mal que estuve al no darte siempre ese lugar.</p>
-    <p>Por eso te escribo. Porque todavía siento algo muy fuerte por vos. Y si en algún rincón de vos queda aunque sea una duda, un “¿y si…?”, quiero que sepas que estoy dispuesto a construir algo nuevo. Sin repetir lo de antes. Sin excusas. Con respeto, amor y todo lo que vos merecés.</p>
-    <p>Y si no es así, si de verdad sentís que esto ya está, igual gracias. Gracias por lo que me diste, por lo que me enseñaste, y por haber sido parte de mi vida. Porque a mí sí me cambiaste. Y eso no lo olvido.</p>
-    <div class="button">
-      <a href="https://wa.me/3513824648" target="_blank">Escribir respuesta</a>
-    </div>
-  </div>  <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_64573009c2.mp3?filename=river-flows-in-you-3317.mp3" type="audio/mpeg">
-  </audio>
+  <h1>¿Querés ser mi novia?</h1>
+  <div class="heart"></div>
+  <div class="mensaje">Te quiero mucho ❤️</div>
+  <div class="firma">Hecho con amor por Lautaro 💌</div>
 </body>
 </html>
